@@ -1,0 +1,41 @@
+body {
+    background-color: peachpuff;
+    width: 50rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.form {
+    font-size: large;
+}
+
+header {
+    height: 5rem;
+    width: 100%;
+    background-color: deepskyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    font-size: larger;
+    font-weight: bolder;
+    display: flex;   
+}
+
+.list  {
+    display: flex;
+    gap: 3rem;
+}
+
