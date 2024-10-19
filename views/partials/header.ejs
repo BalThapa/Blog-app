@@ -9,12 +9,24 @@
 </head>
 <body>
     <header>
-        <h1><a href="#">BLOG APP</a></h1>
+        <h1><a href="/">BLOG APP</a></h1>
      <nav>
         <ul> 
             <div class="list">
-                <li><a href="#">Blog List</a></li>
-                <li><a href="#">My Blog</a></li>    
+                <% const isHomePage = currentPath === '/';%>
+                <% if (!isHomePage) { %>
+                    <li><a href="/" class="home">Home</a></li>
+                    <li><a href="/create">Create Blog</a></li>
+                    <li><a href="#">About</a></li>    
+                    <li><a href="#">Contact</a></li> 
+                <% } else { %>
+                    <li><a href="/create">Create Blog</a></li>
+                    <li><a href="#">About</a></li>    
+                    <li><a href="#">Contact</a></li> 
+                 
+                <% } %>
+                  
+                    
             </div>
            
         </ul>    

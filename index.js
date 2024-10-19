@@ -10,7 +10,12 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/", (req, res)=> {
-    res.render("index.ejs");
+    res.render("index.ejs", {currentPath:req.path}); // passing the current path from your server to the 
+                                                        //EJS template instead of trying 
+                                                        //to access window.location.pathname directly.
+});
+app.get("/create", (req, res)=> {
+    res.render("create.ejs",{currentPath:req.path});
 });
 
 app.listen(port, () =>{
