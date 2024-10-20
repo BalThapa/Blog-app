@@ -2,6 +2,17 @@
 
 
 <footer>
-  
-  <p> Udemypractice@blogApp <%= new Date() .getFullYear() %></p> 
+
+  <div class="footerForm">
+     <p>Contact Us</p>
+    <form action="POST" > 
+      <input type="text" placeholder="Full-Name" name="username" >
+      <input type="email" placeholder="Email" name="useremail">
+      <textarea name="content" id="content" placeholder="Your message here"></textarea>
+  </form>
+  <button>
+    Send 
+  </button>
+  </div>
+  <small>copyright©️Udemypractice@blogApp <%= new Date() .getFullYear() %></small> 
 </footer>

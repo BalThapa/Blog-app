@@ -5,15 +5,17 @@
 }
 
 body {
-    background-color: peachpuff;
     width: 100%;
+    background-color: rgb(253, 251, 242);
 }
 
 main {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    flex-direction: column;
+    gap: 2rem;
+    padding:5rem;
 }
 
 .form {
@@ -33,33 +35,107 @@ header {
 
 .herobanner {
     width: 100%;
-    height: 75vh;
+    height: 50vh;
     display: flex;
+    padding: 2rem;
     justify-content: space-between;
+    background-color: rgb(140, 140, 212);
 }
 .quote {
-    width: 50%;
-    padding: 2rem;
+    font-size: larger;
+    width: 30%;
+   padding: 10rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 3rem;
 }
 
-.blogImg {
+.heroImg {
     width: 100%;
+    height: auto;
+    display: flex;
+    float: inline-end;
+    padding-right:5rem;
+    padding-top:5rem;
+  
 }
 
+button {
+    font-size: large;
+    background-color: gainsboro;
+    padding: 10px;
+    width: 15rem;
+    border: none;
+    border-radius: 5px;
+}
 
+.blogForm{
+    display: flex;
+    flex-direction: row;
+}
 
-footer {
-    height: 3rem;
+.users {
+display: flex;
+flex-direction: column;
+gap:1rem;
+}
+
+.userImg {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+}
+
+footer small{
+    height: auto;
     width: 100%;
     background-color: deepskyblue;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    font-size: medium;
+    padding: 1rem;   
+}
+
+footer p {
+    font-size:x-large;
+    font-weight: bolder;
+}
+
+.footerForm {
+    background-color: blanchedalmond;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     padding: 1rem;
-   
+    position:sticky;
+}
+
+input {
+    width: 30rem;
+    height: 2rem;
+    font-size: large;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+textarea {
+    resize: none;
+    height: 10rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 a {

@@ -17,6 +17,9 @@ app.get("/", (req, res)=> {
 app.get("/create", (req, res)=> {
     res.render("create.ejs",{currentPath:req.path});
 });
+// app.get("/create", (req, res)=> {
+//     res.render("create.ejs",{currentPath:req.path});
+// });
 
 app.listen(port, () =>{
     console.log(`Listening on port ${port}`);

@@ -1,9 +1,19 @@
 <%- include ("partials/header.ejs") %>
-<form action="POST" class="form"> 
-    <input type="text" placeholder="User Name" name="username" >
-    <input type="text" placeholder="User Email" name="useremail">
-    <textarea name="content" id="content" cols="30" rows="10"></textarea>
-</form>
 
+<main>
+    <form action="/submit" method="POST" class="blogForm"> 
+        <div class="users">
+                <input type="text" placeholder="User Name" name="username" >
+                <input type="email" placeholder="User Email" name="useremail">
+                <img src="/assets/userImg.avif" alt="userImg" class="userImg">
+        </div>
+        <div class="users">
+        <input type="text" placeholder="Title " name="title">
+        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        <p>Date:</p>
+         </div>
+    </form>
+    <button>Post</button>
+</main>
 <%- include ("partials/footer.ejs") %>
 
