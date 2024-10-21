@@ -3,17 +3,18 @@
 <main>
     <form action="/submit" method="POST" class="blogForm"> 
         <div class="users">
-                <input type="text" placeholder="User Name" name="username" >
-                <input type="email" placeholder="User Email" name="useremail">
-                <img src="/assets/userImg.avif" alt="userImg" class="userImg">
+                <input type="text" placeholder="User Name" name="userName" >
+                <input type="email" placeholder="User Email" name="userEmail">
+                <input type="img" placeholder="userImg" >
         </div>
         <div class="users">
         <input type="text" placeholder="Title " name="title">
         <textarea name="content" id="content" cols="30" rows="10"></textarea>
-        <p>Date:</p>
-         </div>
+        <p name="createdOn">Created on: <%= (new Date() .getDate()) + "/" + (new Date() .getMonth()) + "/" + (new Date() .getFullYear())  %></p>
+        </div>
+        <input type="submit" value="Create" >
     </form>
-    <button>Post</button>
+  
 </main>
 <%- include ("partials/footer.ejs") %>
 

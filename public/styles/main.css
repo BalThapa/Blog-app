@@ -11,11 +11,9 @@ body {
 
 main {
     display: flex;
-    align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
-    padding:5rem;
+    align-items: center;
 }
 
 .form {
@@ -36,10 +34,11 @@ header {
 .herobanner {
     width: 100%;
     height: 50vh;
-    display: flex;
-    padding: 2rem;
+    display: flex;   
     justify-content: space-between;
     background-color: rgb(140, 140, 212);
+    padding: 1rem;
+    
 }
 .quote {
     font-size: larger;
@@ -56,10 +55,7 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    float: inline-end;
-    padding-right:5rem;
-    padding-top:5rem;
-  
+    padding-top: 0.5rem;
 }
 
 button {
@@ -71,9 +67,29 @@ button {
     border-radius: 5px;
 }
 
+.featuredCards{
+   display: flex;
+   flex-wrap: wrap;
+}
+  
+  
+
+.blogCard {
+    height: 20rem;
+    width: 20rem;
+    border: block; 
+    margin: 2rem;
+    background-color: cyan;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1em;
+}
+
 .blogForm{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .users {
