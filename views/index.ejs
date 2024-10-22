@@ -18,18 +18,23 @@
 </div>
 <h2>Blogs </h2>
 <div class="featuredCards"> 
+    <% if (posts && posts.length > 0) { %>
+    <% posts.forEach(post=> { %>
     <div class="blogCard">
         <div>
-            <h3>Title</h3>
-            <p>Blog content</p>
+            <h3><%= post.title %> </h3>
+            <p><%= locals.content %></p>
+            <p><%=locals.createdOn %></p>
         </div>
         <div>
-            <small>username</small>
-            <small>useremail</small>
-            <img src="" alt="" class="userImg">
+            <small><%= locals.userName %></small>
+            <small><%= locals.userEmail %></small>
         </div>
     </div>    
-   
+   <% }); %>
+   <% }else{ %>
+    <p>No blog posts available.</p>
+    <% } %>
 </div>    
 
 </main>
