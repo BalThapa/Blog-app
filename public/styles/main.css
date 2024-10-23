@@ -58,13 +58,32 @@ header {
     padding-top: 0.5rem;
 }
 
-button {
+.heroButton {
     font-size: large;
     background-color: gainsboro;
     padding: 10px;
     width: 15rem;
     border: none;
     border-radius: 5px;
+    color: rgb(0, 90, 90);
+}
+
+.click {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.edit{
+  width: 5rem;
+  font-size: large;
+  background-color: gainsboro;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(0, 90, 90);
+ text-align: center;
+
 }
 
 .featuredCards{
