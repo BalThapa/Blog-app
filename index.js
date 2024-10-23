@@ -21,28 +21,28 @@ app.get("/", (req, res)=> {
 });
 
 app.get("/create", (req, res)=> {
-    res.render("create.ejs",{currentPath:req.path});
+    res.render("create.ejs" ,{currentPath:req.path});
 });
 
 app.post("/submit", (req,res) => {
-    const userName = req.body.userName;
-    const userEmail = req.body.userEmail;
-    const title = req.body.title;
-    const content = req.body.content;
-    const createdOn = req.body.createdOn;
-   
+    const { userName, userEmail, title, content, createdOn } = req.body;
+    if (!userName || !userEmail || !title || !content || !createdOn ) {
+        return res.redirect ("/create");
+    }
     blogPosts.push ({
-        userName:userName,
-        userEmail:userEmail,
-        title:title,
-        content:content, 
-        createdOn:createdOn  
+        userName,
+        userEmail,
+        title,
+        content, 
+        createdOn  
     })
+    return res.redirect ("/");
     res.render("index.ejs", {
         currentPath:req.path,
-        posts: blogPosts
+        posts: blogPosts,
+        
     })
-   
+    
 })
 
 app.listen(port, () =>{

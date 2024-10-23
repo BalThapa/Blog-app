@@ -18,17 +18,17 @@
 </div>
 <h2>Blogs </h2>
 <div class="featuredCards"> 
-    <% if (posts && posts.length > 0) { %>
+    <% if (posts.length > 0) { %>
     <% posts.forEach(post=> { %>
     <div class="blogCard">
         <div>
             <h3><%= post.title %> </h3>
-            <p><%= locals.content %></p>
-            <p><%=locals.createdOn %></p>
+            <p><%= post.content %></p>
+            <p><%=post.createdOn %></p>
         </div>
         <div>
-            <small><%= locals.userName %></small>
-            <small><%= locals.userEmail %></small>
+            <small><%= post.userName %></small>
+            <small><%= post.userEmail %></small>
         </div>
     </div>    
    <% }); %>

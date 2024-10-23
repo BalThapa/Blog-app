@@ -3,13 +3,13 @@
 <main>
     <form action="/submit" method="POST" class="blogForm"> 
         <div class="users">
-                <input type="text" placeholder="User Name" name="userName" >
-                <input type="email" placeholder="User Email" name="userEmail">
+                <input type="text" placeholder="User Name" name="userName" required>
+                <input type="email" placeholder="User Email" name="userEmail" required>
         </div>
         <div class="users">
-        <input type="text" placeholder="Title " name="title">
-        <textarea name="content" id="content" cols="30" rows="10" placeholder="Your content here."></textarea>
-        <input type="text" name="createdOn" placeholder="Created Date: dd/mm/yyyy">
+        <input type="text" placeholder="Title " name="title" required>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="Your content here." required></textarea>
+        <input type="text" name="createdOn" placeholder="Created Date: dd/mm/yyyy" required>
         </div>
         <input type="submit" value="Create">
     </form>
