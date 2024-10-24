@@ -20,8 +20,10 @@
 <div class="featuredCards">
     <% if (posts.length > 0) { %>
     <% posts.forEach(post=> { %>
-    <div class="blogCard"> 
+    <form action="/edit-delete" method="POST" class="blogCard"> 
         <div>
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id" value="<%= post.id %>">
             <h3><%= post.title %> </h3>
             <p><%= post.content %></p>
             <p><%=post.createdOn %></p>
@@ -30,13 +32,12 @@
             <small><%= post.userName %></small>
             <small><%= post.userEmail %></small>
         </div>
+
         <div class="click">
-                <button formaction="/delete" class="edit">Edit</button>
-          
-                <button formaction="/edit" class="edit">Delete</button>
+                <button type="submit" class="edit" >Delete</button>
         </div>
         
-    </div>    
+    </form>    
    <% }); %>
    <% }else{ %>
     <p>No blog posts available.</p>
