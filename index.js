@@ -51,13 +51,17 @@ app.post("/submit", (req,res) => {
     res.redirect ("/");
 })
 
-app.delete('/edit-delete', (req,res)=> {
+app.delete('/delete', (req,res)=> {
     const id = parseInt(req.body.id);
     const filteredPosts = blogPosts.filter(blogPost => blogPost.id !== id);
     blogPosts.length = 0;
     blogPosts.push(...filteredPosts);
     res.redirect('/')
     
+})
+
+app.get('/edit', (req, res) => {
+    res.render("edit.ejs", {currentPath:req.path})
 })
 
 app.listen(port, () =>{

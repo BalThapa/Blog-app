@@ -1,9 +1,8 @@
 <%- include ("partials/header.ejs") %>
 
 <main>
-    
-    <h2>Create your Blog</h2>
-    <form action="/submit" method="POST" class="blogForm"> 
+    <h2>Edit your Blog</h2>
+    <form action="/get" method="POST" class="blogForm"> 
         <div class="users">
                 <input type="text" placeholder="User Name" name="userName" required>
                 <input type="email" placeholder="User Email" name="userEmail" required>
@@ -13,9 +12,9 @@
         <textarea name="content" id="content" cols="30" rows="10" placeholder="Your content here." required></textarea>
         <input type="text" name="createdOn" placeholder="Created Date: dd/mm/yyyy" requirednodemon>
         </div>
-        <button type="submit" class="heroButton">Create</button>
+        <button type="submit" class="heroButton">Save Changes</button>
     </form>
-
+  
 </main>
 <%- include ("partials/footer.ejs") %>
 
