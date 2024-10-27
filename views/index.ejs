@@ -35,10 +35,9 @@
 
         <div class="click">
                 <button formaction="/delete" type="submit" class="edit" >Delete</button>
-                <button  formaction="/edit" type="submit" class="edit" ><a href="/edit">Edit</a></button>
-        </div>
-        
-    </form>    
+                <button  formaction="/edit/:id" type="submit" class="edit" ><a href="/edit/:id">EDIT</a></button>  
+        </div>   
+    </form>  
    <% }); %>
    <% }else{ %>
     <p>No blog posts available.</p>

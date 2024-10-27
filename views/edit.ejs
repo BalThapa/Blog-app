@@ -2,15 +2,15 @@
 
 <main>
     <h2>Edit your Blog</h2>
-    <form action="/get" method="POST" class="blogForm"> 
+    <form action="<%= editPosts ? '/update/' + editPosts.id : '/submit' %>" method="POST" class="blogForm"> 
         <div class="users">
-                <input type="text" placeholder="User Name" name="userName" required>
-                <input type="email" placeholder="User Email" name="userEmail" required>
+                <input type="text" placeholder="User Name" name="userName" value="<%= editPosts ? editPosts.userName : '' %>" required>
+                <input type="email" placeholder="User Email" name="userEmail" value="<%= editPosts ? editPosts.userEmail : '' %>" required>
         </div>
         <div class="users">
-        <input type="text" placeholder="Title " name="title" required>
-        <textarea name="content" id="content" cols="30" rows="10" placeholder="Your content here." required></textarea>
-        <input type="text" name="createdOn" placeholder="Created Date: dd/mm/yyyy" requirednodemon>
+        <input type="text" placeholder="Title " name="title" value="<%= editPosts ? editPosts.title : '' %>"  required>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="Your content here." required> <%= editPosts ? editPosts.content : '' %>" </textarea>
+        <input type="text" name="createdOn" placeholder="Created Date: dd/mm/yyyy" value="<%= editPosts ? editPosts.createdOn :''  %>"  requirednodemon>
         </div>
         <button type="submit" class="heroButton">Save Changes</button>
     </form>

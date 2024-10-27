@@ -60,9 +60,39 @@ app.delete('/delete', (req,res)=> {
     
 })
 
-app.get('/edit', (req, res) => {
-    res.render("edit.ejs", {currentPath:req.path})
+app.get('/edit/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const editPosts = blogPosts.find(blogPost => blogPost.id !== id);
+
+    if (!editPosts) {
+        return res.redirect('/');
+    } else {
+        res.render("edit.ejs",
+         {currentPath:req.path,
+            editPosts
+        })
+    }  
 })
+
+app.post('/update/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const { userName, userEmail, title, content, createdOn } = req.body;
+
+    const postIndex = blogPosts.findIndex(blogPost => blogPost.id === id);
+    
+    if (postIndex !== -1) {
+        blogPosts[postIndex] = {
+            id,
+            userName,
+            userEmail,
+            title,
+            content,
+            createdOn
+        };
+    }
+    res.redirect('/');
+});
+
 
 app.listen(port, () =>{
     console.log(`Listening on port ${port}`);
