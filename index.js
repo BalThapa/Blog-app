@@ -34,6 +34,10 @@ app.get("/create", (req, res)=> {
     res.render("create.ejs" ,{currentPath:req.path});
 });
 
+app.get("/about", (req, res)=> {
+    res.render("about.ejs" ,{currentPath:req.path});
+});
+
 app.post("/submit", (req,res) => {
     const id = blogPosts.length + 1
     const {userName, userEmail, title, content, createdOn } = req.body;

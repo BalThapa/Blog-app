@@ -246,6 +246,20 @@ li {
     margin:2rem;
 }
 
+.about {
+    padding: 3rem 35rem 3rem 35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.about p {
+    font-size: large;
+    text-align: left;
+    line-height: 2rem;
+}
+
 .bubble {
     border-radius: 50%;
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2), 
