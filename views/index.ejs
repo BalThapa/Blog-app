@@ -18,7 +18,27 @@
 </div>
 <h2>Blogs </h2>
 <div class="featuredCards">
-    <% if (posts.length > 0) { %>
+    <div class="blogCard"> 
+        <div>
+            <input type="hidden" name="_method" value="DELETE">
+            <input type="hidden" name="id">
+            <h3> Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacus nec quam rhoncus, sed feugiat tellus tincidunt. Donec ac lectus non enim volutpat convallis. Vestibulum pretium mauris dictum libero vehicula accumsan. Phasellus ut nulla neque. Fusce enim leo, elementum quis lectus in, faucibus sollicitudin eros. Vivamus fringilla lacus in eros elementum congue. Pellentesque id rhoncus nunc. Phasellus nec urna felis. Curabitur sollicitudin vitae neque at dapibus. Nam laoreet eget ante nec feugiat. Vivamus eget tristique velit. Donec vitae tempus nulla, sit amet maximus tellus. Cras tellus eros, molestie ac ex dictum, rutrum viverra elit. Donec ultrices orci vel elit ornare vestibulum. Suspendisse id augue sit amet nisl vestibulum efficitur. Proin nulla urna, accumsan vel eleifend quis, fringilla ac leo.
+
+            </p>
+            <p>22.10.2024</p>
+        </div>
+        <div class="small">
+            <p>Lorem-Ipsim</p>
+            <p>lorem.ipsum@gmail.com</p>
+        </div>
+
+        <div class="click">
+                <button formaction="/delete" type="submit" class="edit" >Delete</button>
+                <button  formaction="/edit/:id" type="submit" class="edit" ><a href="/edit/:id">EDIT</a></button>  
+        </div>   
+    </div>  
+    
     <% posts.forEach(post=> { %>
     <form method="POST" class="blogCard"> 
         <div>
@@ -28,9 +48,9 @@
             <p><%= post.content %></p>
             <p><%=post.createdOn %></p>
         </div>
-        <div>
-            <small><%= post.userName %></small>
-            <small><%= post.userEmail %></small>
+        <div class="small">
+            <p><%= post.userName %></p>
+            <p><%= post.userEmail %></p>
         </div>
 
         <div class="click">
@@ -39,9 +59,7 @@
         </div>   
     </form>  
    <% }); %>
-   <% }else{ %>
-    <p>No blog posts available.</p>
-    <% } %>
+   
 </div>    
 
 </main>
