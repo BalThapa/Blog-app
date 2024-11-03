@@ -2,6 +2,18 @@
 <main>
 
 <div class="herobanner">
+    <div id="bubble-wrap">
+        <div class="bubble x1"></div>
+        <div class="bubble x2"></div>
+        <div class="bubble x3"></div>
+        <div class="bubble x4"></div>
+        <div class="bubble x5"></div>
+        <div class="bubble x6"></div>
+        <div class="bubble x7"></div>
+        <div class="bubble x8"></div>
+        <div class="bubble x9"></div>
+        <div class="bubble x10"></div>
+    </div>
     <div class="quote">
         <h2>
             "Welcome to our Blog App! Share your thoughts, connect with a 
@@ -26,7 +38,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis varius lacus nec quam rhoncus, sed feugiat tellus tincidunt. Donec ac lectus non enim volutpat convallis. Vestibulum pretium mauris dictum libero vehicula accumsan. Phasellus ut nulla neque. Fusce enim leo, elementum quis lectus in, faucibus sollicitudin eros. Vivamus fringilla lacus in eros elementum congue. Pellentesque id rhoncus nunc. Phasellus nec urna felis. Curabitur sollicitudin vitae neque at dapibus. Nam laoreet eget ante nec feugiat. Vivamus eget tristique velit. Donec vitae tempus nulla, sit amet maximus tellus. Cras tellus eros, molestie ac ex dictum, rutrum viverra elit. Donec ultrices orci vel elit ornare vestibulum. Suspendisse id augue sit amet nisl vestibulum efficitur. Proin nulla urna, accumsan vel eleifend quis, fringilla ac leo.
 
             </p>
-            <p>22.10.2024</p>
+            <p class="date">22.10.2024</p>
         </div>
         <div class="small">
             <p>Lorem-Ipsim</p>
@@ -34,8 +46,8 @@
         </div>
 
         <div class="click">
-                <button formaction="/delete" type="submit" class="edit" >Delete</button>
-                <button  formaction="/edit/:id" type="submit" class="edit" ><a href="/edit/:id">EDIT</a></button>  
+                <button  type="submit" class="edit" >Delete</button>
+                <button  type="submit" class="edit" >EDIT</a></button>  
         </div>   
     </div>  
     
@@ -46,7 +58,7 @@
             <input type="hidden" name="id" value="<%= post.id %>">
             <h3><%= post.title %> </h3>
             <p><%= post.content %></p>
-            <p><%=post.createdOn %></p>
+            <p class="date"><%=post.createdOn %></p>
         </div>
         <div class="small">
             <p><%= post.userName %></p>
