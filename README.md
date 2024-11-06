@@ -1,4 +1,3 @@
-[![Node CI](https://github.com/BalThapa/My-portfolio-react-/actions/workflows/production.yaml/badge.svg)](https://github.com/BalThapa/My-portfolio-react-/actions/workflows/production.yaml)
 
 # Blog Post App
 
