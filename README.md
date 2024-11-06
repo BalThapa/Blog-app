@@ -1,3 +1,4 @@
+[![Node CI](https://github.com/BalThapa/Blog-app/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/BalThapa/Blog-app/actions/workflows/pages/pages-build-deployment)
 
 # Blog Post App
 
