@@ -1,4 +1,3 @@
-[![Node CI](https://github.com/BalThapa/Blog-app/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/BalThapa/Blog-app/actions/workflows/jekyll-gh-pages.yml)
 
 # Blog Post App
 
