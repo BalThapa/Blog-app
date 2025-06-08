@@ -10,6 +10,10 @@ body {
     font-family: 'Roboto', sans-serif;
     width: 100%;
     background-color: rgb(253, 251, 242);
+    background: url(../assets/sky.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 main {
@@ -44,9 +48,12 @@ header {
     justify-content: space-between;  
     padding: 2rem; 
     width: 100%;
-    background-color: rgb(140, 140, 212);
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     position: relative;
     overflow: hidden;
+    color: white;
 }
 
 #bubble-wrap {
@@ -118,7 +125,7 @@ button:active {
     gap: 1rem;
     border-radius: 5px; 
     margin-bottom: 2rem;
-    background-color: cyan;
+    background-color: rgb(7, 184, 184);
 }
 
 
@@ -154,6 +161,7 @@ button:active {
 h2 {
     text-align: center;
     margin-top: 10px;
+   
 }
 
 .blogForm{
@@ -200,7 +208,6 @@ footer p {
 }
 
 .footerForm {
-    background-color: blanchedalmond;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -209,6 +216,9 @@ footer p {
     gap: 2rem;
     padding: 1rem;
     position:sticky;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 input {
